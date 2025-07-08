@@ -1,8 +1,8 @@
 import React from "react";
 // import { useState } from "react";
-import data from "./data";
+import data from "../data";
 
-export default function Preview() {
+export default function Preview({personalInfo}) {
      return (
     <div className="min-h-2 flex items-center justify-center p-4 w-[60vw] min-w-[320px] max-w-[700px] p-5 mx-auto mt-[5vh]" id="main-container">
       <div className="w-full">
@@ -16,28 +16,28 @@ export default function Preview() {
           <div className="space-y-6">
             <div className="space-y-2">
               <div className="block  text-lg font-medium text-color-for-label text-props">
-                {data.personalInfo.name}
+                {personalInfo.name}
               </div>
 
             </div>
             
             <div className="space-y-2">
               <div className="block text-color-for-label text-lg font-medium text-props">
-                {data.personalInfo.email}
+                {personalInfo.email}
               </div>
         
             </div>
             
             <div className="space-y-2">
               <div className="block text-color-for-label text-lg font-medium text-props">
-               {data.personalInfo.location}
+               {personalInfo.location}
               </div>
 
             </div>
             
             <div className="space-y-2">
               <div className="block text-color-for-label text-lg font-medium text-props">
-               {data.personalInfo.linkedIn}
+               {personalInfo.linkedIn}
               </div>
 
             </div>

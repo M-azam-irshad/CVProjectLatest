@@ -1,10 +1,9 @@
 import { useState } from "react";
-import data from "./data";
-export default function PersonalInfo() {
-  const [name, setName] = useState(data.personalInfo.name);
-  const [email, setEmail] = useState(data.personalInfo.email);
-  const [location, setLocation] = useState(data.personalInfo.location);
-  const [linkedIn, setLinkedIn] = useState(data.personalInfo.linkedIn);
+export default function PersonalInfo({personalInfo, setPersonalInfo}) {
+  const [name, setName] = useState(personalInfo.name || "");
+  const [email, setEmail] = useState(personalInfo.email || "");
+  const [location, setLocation] = useState(personalInfo.location || "");
+  const [linkedIn, setLinkedIn] = useState(personalInfo.linkedIn || "");
 
 
 
@@ -13,19 +12,31 @@ export default function PersonalInfo() {
 
 function handleName (e){
   setName(e.target.value)
-  data.personalInfo.name = e.target.value
+  setPersonalInfo((prev) => ({
+    ...prev,
+    name: e.target.value
+  }))
 }
 function handleEmail (e){
   setEmail(e.target.value)
-  data.personalInfo.email = e.target.value
+  setPersonalInfo((prev) => ({
+    ...prev,
+    email: e.target.value
+  }))
 }
 function handleLocation (e){
   setLocation(e.target.value)
-  data.personalInfo.location = e.target.value
+  setPersonalInfo((prev)=>({
+    ...prev,
+    location: e.target.value
+  }))
 }
 function handleLinkedIn (e){
   setLinkedIn(e.target.value)
-  data.personalInfo.linkedIn = e.target.value
+  setPersonalInfo((prev) => ({
+    ...prev,
+    linkedIn: e.target.value
+  }))
 }
   return (
     <div className="min-h-2 flex items-center justify-center p-4 w-[60vw] min-w-[320px] max-w-[700px] p-5 mx-auto mt-[5vh]" id="main-container">
