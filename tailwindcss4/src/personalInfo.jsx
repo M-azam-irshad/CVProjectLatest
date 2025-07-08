@@ -13,19 +13,19 @@ export default function PersonalInfo() {
 
 function handleName (e){
   setName(e.target.value)
-  setData({ ...data, personalInfo: { ...data.personalInfo, name: e.target.value } })
+  data.personalInfo.name = e.target.value
 }
 function handleEmail (e){
   setEmail(e.target.value)
-  setData({ ...data, personalInfo: { ...data.personalInfo, email: e.target.value } })
+  data.personalInfo.email = e.target.value
 }
 function handleLocation (e){
   setLocation(e.target.value)
-  setData({ ...data, personalInfo: { ...data.personalInfo, location: e.target.value } })
+  data.personalInfo.location = e.target.value
 }
 function handleLinkedIn (e){
   setLinkedIn(e.target.value)
-  setData({ ...data, personalInfo: { ...data.personalInfo, linkedIn: e.target.value } })
+  data.personalInfo.linkedIn = e.target.value
 }
   return (
     <div className="min-h-2 flex items-center justify-center p-4 w-[60vw] min-w-[320px] max-w-[700px] p-5 mx-auto mt-[5vh]" id="main-container">
