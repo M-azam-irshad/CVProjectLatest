@@ -39,7 +39,7 @@ function handleLinkedIn (e){
   }))
 }
   return (
-    <div className="min-h-2 flex items-center justify-center p-4 w-[60vw] min-w-[320px] max-w-[700px] p-5 mx-auto mt-[5vh]" id="main-container">
+    <div className="h-auto flex items-center justify-center  w-[60vw] min-w-[320px] max-w-[700px] p-5 mx-auto mt-[5vh]" id="main-container">
       <div className="w-full">
         <div 
           className="bg-gradient-to-b from-blue-100 to-blue-200 p-8 rounded-xl shadow-lg w-full"
@@ -103,5 +103,7 @@ function handleLinkedIn (e){
         </div>
       </div>
     </div>
+
+    
   );
 }
