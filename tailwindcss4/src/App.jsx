@@ -35,11 +35,11 @@ export default function App() {
             <div className="App">
                 <button id='previewButton' className='ring-blue-500 ring-2 absolute font-sans top-2.5 right-1.5 bg-gradient-to-tr from-white to-blue-300 w-[clamp(50px,20vw,200px)] text-[clamp(12px,2vw,20px)] text-black p-1.5 px-2.5 rounded-md border-none cursor-pointer' onClick={() => setPreview(!preview)}>{preview ? "Edit" : "Preview"}</button>
                 {!preview ? <>
-               <div> <h1 className='mt-5'>Personal Information</h1>
-               <PersonalInfo  personalInfo={personalInfo} setPersonalInfo={setPersonalInfo} /></div>
-                <div> <h1 className='mt-5'>Experience Information</h1></div>
+               <div className='flex  align-middle mb-[-29px]'> <h1 className='mt-5 font-bold text-[clamp(24px,4vw,36px)]'>Personal Information</h1></div>
+               <PersonalInfo  personalInfo={personalInfo} setPersonalInfo={setPersonalInfo} />
+                <div className='flex  align-middle mb-[-29px]'> <h1 className='mt-5 font-bold text-[clamp(24px,4vw,36px)]'>Experience Information</h1></div>
                <ExperienceInfo  experience={experience} setExperience={setExperience} />
-                <h1 className='mt-5'>Education Information</h1>
+                <div className='flex  align-middle mb-[-29px]'> <h1 className='mt-5 font-bold text-[clamp(24px,4vw,36px)]'>Education Information</h1></div>
                <EducationInfo education={education} setEducation={setEducation} />
                  </>
 
