@@ -4,6 +4,7 @@ import { useState } from 'react';
 import PersonalInfo from './components/personalInfo';
 import ExperienceInfo from './components/experienceInfo';
 import Preview  from './components/preview';
+import EducationInfo from './components/educationInfo';
 
 
 export default function App() {
@@ -21,6 +22,14 @@ export default function App() {
     location: "e.g New York",
     linkedIn: "e.g https://www.linkedin.com/in/johndoe"
   });
+
+  const [education, setEducation] = useState({
+    degree: "e.g Bachelor of Science",  
+    fieldOfStudy: "e.g Computer Science",
+    school: "e.g University of Example",
+    graduationYear: "e.g 2020",
+    description: "e.g Graduated with honors"
+  });
     return (
         <react.StrictMode>
             <div className="App">
@@ -30,9 +39,11 @@ export default function App() {
                <PersonalInfo  personalInfo={personalInfo} setPersonalInfo={setPersonalInfo} /></div>
                 <div> <h1 className='mt-5'>Experience Information</h1></div>
                <ExperienceInfo  experience={experience} setExperience={setExperience} />
+                <h1 className='mt-5'>Education Information</h1>
+               <EducationInfo education={education} setEducation={setEducation} />
                  </>
 
-                : <Preview personalInfo={personalInfo} experience={experience} />}
+                : <Preview personalInfo={personalInfo} experience={experience} education={education} />}
             </div>
         </react.StrictMode>
     );
