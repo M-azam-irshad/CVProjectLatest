@@ -5,6 +5,7 @@ import PersonalInfo from './components/personalInfo';
 import ExperienceInfo from './components/experienceInfo';
 import Preview  from './components/preview';
 import EducationInfo from './components/educationInfo';
+import { Analytics } from "@vercel/analytics/react"
 
 
 export default function App() {
